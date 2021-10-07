@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mill", "Mill\Mill.csproj", "{D315331A-FAC9-4D90-B8E7-CB285FF6368F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MillTest", "..\MillTest\MillTest\MillTest.csproj", "{C88F2230-17BD-4D9D-86DA-31665975EE40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D315331A-FAC9-4D90-B8E7-CB285FF6368F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D315331A-FAC9-4D90-B8E7-CB285FF6368F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D315331A-FAC9-4D90-B8E7-CB285FF6368F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D315331A-FAC9-4D90-B8E7-CB285FF6368F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88F2230-17BD-4D9D-86DA-31665975EE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88F2230-17BD-4D9D-86DA-31665975EE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88F2230-17BD-4D9D-86DA-31665975EE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88F2230-17BD-4D9D-86DA-31665975EE40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C605A91-8B7D-4740-8A9E-B756ECFCF470}
+	EndGlobalSection
+EndGlobal
