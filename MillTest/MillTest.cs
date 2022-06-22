@@ -9,135 +9,135 @@ namespace MillTest
         [TestMethod]
         public void TestIllegalSet()
         {
-            MillGame MillGame = new Mill.MillGame();
-            Assert.IsFalse(MillGame.Set(1, Color.black));
+            var millGame = new MillGame();
+            Assert.IsFalse(millGame.Set(1, Player.Black));
         }
 
         [TestMethod]
         public void TestGet()
         {
-            MillGame Mill = new MillGame();
-            Assert.IsTrue(Mill.Set(1, Color.white));
-            Assert.AreEqual(Mill.Get(1), Color.white);
+            var millGame = new MillGame();
+            Assert.IsTrue(millGame.Set(1, Player.White));
+            Assert.AreEqual(millGame.Get(1), Player.White);
         }
 
         [TestMethod]
         public void TestIllegalMove()
         {
-            MillGame Mill = new MillGame();
-            Assert.IsFalse(Mill.Move(1, 2, Color.white));
+            var millGame = new MillGame();
+            Assert.IsFalse(millGame.Move(1, 2, Player.White));
         }
 
         [TestMethod]
         public void TestEntireGame()
         {
-            MillGame Mill = new MillGame();
-            Assert.IsTrue(Mill.Set(5, Color.white));
-            Assert.IsTrue(Mill.Set(20, Color.black));
-            Assert.IsTrue(Mill.Set(14, Color.white));
-            Assert.IsTrue(Mill.Set(6, Color.black));
-            Assert.IsTrue(Mill.Set(9, Color.white));
-            Assert.IsTrue(Mill.Set(8, Color.black));
-            Assert.IsTrue(Mill.Set(13, Color.white));
-            Assert.IsTrue(Mill.Set(15, Color.black));
-            Assert.IsTrue(Mill.Set(18, Color.white));
-            Assert.IsTrue(Mill.Take(8, Color.white));
-            Assert.IsTrue(Mill.Set(8, Color.black));
-            Assert.IsTrue(Mill.Set(3, Color.white));
-            Assert.IsTrue(Mill.Set(21, Color.black));
-            Assert.IsTrue(Mill.Set(19, Color.white));
-            Assert.IsTrue(Mill.Set(1, Color.black));
-            Assert.IsTrue(Mill.Set(11, Color.white));
-            Assert.IsTrue(Mill.Set(4, Color.black));
-            Assert.IsTrue(Mill.Set(23, Color.white));
-            Assert.IsTrue(Mill.Set(24, Color.black));
+            var millGame = new MillGame();
+            Assert.IsTrue(millGame.Set(5, Player.White));
+            Assert.IsTrue(millGame.Set(20, Player.Black));
+            Assert.IsTrue(millGame.Set(14, Player.White));
+            Assert.IsTrue(millGame.Set(6, Player.Black));
+            Assert.IsTrue(millGame.Set(9, Player.White));
+            Assert.IsTrue(millGame.Set(8, Player.Black));
+            Assert.IsTrue(millGame.Set(13, Player.White));
+            Assert.IsTrue(millGame.Set(15, Player.Black));
+            Assert.IsTrue(millGame.Set(18, Player.White));
+            Assert.IsTrue(millGame.Take(8, Player.White));
+            Assert.IsTrue(millGame.Set(8, Player.Black));
+            Assert.IsTrue(millGame.Set(3, Player.White));
+            Assert.IsTrue(millGame.Set(21, Player.Black));
+            Assert.IsTrue(millGame.Set(19, Player.White));
+            Assert.IsTrue(millGame.Set(1, Player.Black));
+            Assert.IsTrue(millGame.Set(11, Player.White));
+            Assert.IsTrue(millGame.Set(4, Player.Black));
+            Assert.IsTrue(millGame.Set(23, Player.White));
+            Assert.IsTrue(millGame.Set(24, Player.Black));
 
-            Assert.IsFalse(Mill.Set(19, Color.white));
-            Assert.IsFalse(Mill.Set(10, Color.black));
+            Assert.IsFalse(millGame.Set(19, Player.White));
+            Assert.IsFalse(millGame.Set(10, Player.Black));
 
-            Assert.IsFalse(Mill.Take(19, Color.black));
+            Assert.IsFalse(millGame.Take(19, Player.Black));
 
-            Assert.IsFalse(Mill.Move(19, 4, Color.white));
+            Assert.IsFalse(millGame.Move(19, 4, Player.White));
 
-            Assert.IsTrue(Mill.Move(18, 17, Color.white));
-            Assert.IsTrue(Mill.Move(1, 2, Color.black));
-            Assert.IsTrue(Mill.Move(17, 18, Color.white));
-            Assert.IsFalse(Mill.Move(2, 1, Color.black));
-            Assert.IsTrue(Mill.Take(20, Color.white));
-            Assert.IsTrue(Mill.Move(21, 20, Color.black));
-            Assert.IsTrue(Mill.Move(18, 17, Color.white));
-            Assert.IsTrue(Mill.Move(2, 1, Color.black));
-            Assert.IsTrue(Mill.Move(17, 18, Color.white));
-            Assert.IsTrue(Mill.Take(20, Color.white));
-            Assert.IsTrue(Mill.Move(1, 2, Color.black));
-            Assert.IsTrue(Mill.Move(19, 20, Color.white));
-            Assert.IsTrue(Mill.Move(2, 1, Color.black));
-            Assert.IsTrue(Mill.Move(5, 2, Color.white));
-            Assert.IsTrue(Mill.Move(8, 5, Color.black));
-            Assert.IsFalse(Mill.Take(18, Color.black));
-            Assert.IsTrue(Mill.Take(11, Color.black));
-            Assert.IsTrue(Mill.Move(18, 17, Color.white));
-            Assert.IsFalse(Mill.Take(5, Color.white));
-            Assert.IsTrue(Mill.Take(1, Color.white));
-            Assert.IsTrue(Mill.Move(5, 8, Color.black));
-            Assert.IsTrue(Mill.Move(17, 18, Color.white));
-            Assert.IsTrue(Mill.Take(8, Color.white));
-            Assert.IsTrue(Mill.Move(24, 1, Color.black));
-            Assert.IsTrue(Mill.Move(18, 17, Color.white));
-            Assert.IsTrue(Mill.Take(15, Color.white));
-            Assert.IsTrue(Mill.Move(6, 19, Color.black));
-            Assert.IsTrue(Mill.Move(17, 18, Color.white));
-            Assert.IsTrue(Mill.Take(4, Color.white));
-            Assert.AreEqual(Mill.WhiteWins, 1);
+            Assert.IsTrue(millGame.Move(18, 17, Player.White));
+            Assert.IsTrue(millGame.Move(1, 2, Player.Black));
+            Assert.IsTrue(millGame.Move(17, 18, Player.White));
+            Assert.IsFalse(millGame.Move(2, 1, Player.Black));
+            Assert.IsTrue(millGame.Take(20, Player.White));
+            Assert.IsTrue(millGame.Move(21, 20, Player.Black));
+            Assert.IsTrue(millGame.Move(18, 17, Player.White));
+            Assert.IsTrue(millGame.Move(2, 1, Player.Black));
+            Assert.IsTrue(millGame.Move(17, 18, Player.White));
+            Assert.IsTrue(millGame.Take(20, Player.White));
+            Assert.IsTrue(millGame.Move(1, 2, Player.Black));
+            Assert.IsTrue(millGame.Move(19, 20, Player.White));
+            Assert.IsTrue(millGame.Move(2, 1, Player.Black));
+            Assert.IsTrue(millGame.Move(5, 2, Player.White));
+            Assert.IsTrue(millGame.Move(8, 5, Player.Black));
+            Assert.IsFalse(millGame.Take(18, Player.Black));
+            Assert.IsTrue(millGame.Take(11, Player.Black));
+            Assert.IsTrue(millGame.Move(18, 17, Player.White));
+            Assert.IsFalse(millGame.Take(5, Player.White));
+            Assert.IsTrue(millGame.Take(1, Player.White));
+            Assert.IsTrue(millGame.Move(5, 8, Player.Black));
+            Assert.IsTrue(millGame.Move(17, 18, Player.White));
+            Assert.IsTrue(millGame.Take(8, Player.White));
+            Assert.IsTrue(millGame.Move(24, 1, Player.Black));
+            Assert.IsTrue(millGame.Move(18, 17, Player.White));
+            Assert.IsTrue(millGame.Take(15, Player.White));
+            Assert.IsTrue(millGame.Move(6, 19, Player.Black));
+            Assert.IsTrue(millGame.Move(17, 18, Player.White));
+            Assert.IsTrue(millGame.Take(4, Player.White));
+            Assert.AreEqual(millGame.WhiteWins, 1);
         }
 
         [TestMethod]
         public void TestWinByNoMove()
         {
-            MillGame Mill = new MillGame();
-            Assert.IsTrue(Mill.Set(2, Color.white));
-            Assert.IsTrue(Mill.Set(1, Color.black));
-            Assert.IsTrue(Mill.Set(3, Color.white));
-            Assert.IsTrue(Mill.Set(5, Color.black));
-            Assert.IsTrue(Mill.Set(4, Color.white));
-            Assert.IsTrue(Mill.Set(11, Color.black));
-            Assert.IsTrue(Mill.Set(6, Color.white));
-            Assert.IsTrue(Mill.Set(12, Color.black));
-            Assert.IsTrue(Mill.Set(10, Color.white));
-            Assert.IsTrue(Mill.Set(14, Color.black));
-            Assert.IsTrue(Mill.Set(15, Color.white));
-            Assert.IsTrue(Mill.Set(18, Color.black));
-            Assert.IsTrue(Mill.Set(19, Color.white));
-            Assert.IsTrue(Mill.Set(20, Color.black));
-            Assert.IsTrue(Mill.Set(22, Color.white));
-            Assert.IsTrue(Mill.Set(21, Color.black));
-            Assert.IsTrue(Mill.Set(23, Color.white));
-            Assert.IsTrue(Mill.Set(24, Color.black));
+            var millGame = new MillGame();
+            Assert.IsTrue(millGame.Set(2, Player.White));
+            Assert.IsTrue(millGame.Set(1, Player.Black));
+            Assert.IsTrue(millGame.Set(3, Player.White));
+            Assert.IsTrue(millGame.Set(5, Player.Black));
+            Assert.IsTrue(millGame.Set(4, Player.White));
+            Assert.IsTrue(millGame.Set(11, Player.Black));
+            Assert.IsTrue(millGame.Set(6, Player.White));
+            Assert.IsTrue(millGame.Set(12, Player.Black));
+            Assert.IsTrue(millGame.Set(10, Player.White));
+            Assert.IsTrue(millGame.Set(14, Player.Black));
+            Assert.IsTrue(millGame.Set(15, Player.White));
+            Assert.IsTrue(millGame.Set(18, Player.Black));
+            Assert.IsTrue(millGame.Set(19, Player.White));
+            Assert.IsTrue(millGame.Set(20, Player.Black));
+            Assert.IsTrue(millGame.Set(22, Player.White));
+            Assert.IsTrue(millGame.Set(21, Player.Black));
+            Assert.IsTrue(millGame.Set(23, Player.White));
+            Assert.IsTrue(millGame.Set(24, Player.Black));
 
-            Assert.AreEqual(Mill.BlackWins, 1);
+            Assert.AreEqual(millGame.BlackWins, 1);
 
-            Assert.IsTrue(Mill.Set(1, Color.white));
-            Assert.IsTrue(Mill.Set(2, Color.black));
-            Assert.IsTrue(Mill.Set(5, Color.white));
-            Assert.IsTrue(Mill.Set(3, Color.black));
-            Assert.IsTrue(Mill.Set(11, Color.white));
-            Assert.IsTrue(Mill.Set(4, Color.black));
-            Assert.IsTrue(Mill.Set(12, Color.white));
-            Assert.IsTrue(Mill.Set(6, Color.black));
-            Assert.IsTrue(Mill.Set(14, Color.white));
-            Assert.IsTrue(Mill.Set(10, Color.black));
-            Assert.IsTrue(Mill.Set(18, Color.white));
-            Assert.IsTrue(Mill.Set(15, Color.black));
-            Assert.IsTrue(Mill.Set(20, Color.white));
-            Assert.IsTrue(Mill.Set(19, Color.black));
-            Assert.IsTrue(Mill.Set(21, Color.white));
-            Assert.IsTrue(Mill.Set(22, Color.black));
-            Assert.IsTrue(Mill.Set(24, Color.white));
-            Assert.IsTrue(Mill.Set(23, Color.black));
+            Assert.IsTrue(millGame.Set(1, Player.White));
+            Assert.IsTrue(millGame.Set(2, Player.Black));
+            Assert.IsTrue(millGame.Set(5, Player.White));
+            Assert.IsTrue(millGame.Set(3, Player.Black));
+            Assert.IsTrue(millGame.Set(11, Player.White));
+            Assert.IsTrue(millGame.Set(4, Player.Black));
+            Assert.IsTrue(millGame.Set(12, Player.White));
+            Assert.IsTrue(millGame.Set(6, Player.Black));
+            Assert.IsTrue(millGame.Set(14, Player.White));
+            Assert.IsTrue(millGame.Set(10, Player.Black));
+            Assert.IsTrue(millGame.Set(18, Player.White));
+            Assert.IsTrue(millGame.Set(15, Player.Black));
+            Assert.IsTrue(millGame.Set(20, Player.White));
+            Assert.IsTrue(millGame.Set(19, Player.Black));
+            Assert.IsTrue(millGame.Set(21, Player.White));
+            Assert.IsTrue(millGame.Set(22, Player.Black));
+            Assert.IsTrue(millGame.Set(24, Player.White));
+            Assert.IsTrue(millGame.Set(23, Player.Black));
 
-            Assert.IsTrue(Mill.Move(12, 7, Color.white));
+            Assert.IsTrue(millGame.Move(12, 7, Player.White));
 
-            Assert.AreEqual(Mill.WhiteWins, 1);
+            Assert.AreEqual(millGame.WhiteWins, 1);
         }
     }
 }
