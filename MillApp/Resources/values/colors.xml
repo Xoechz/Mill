@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Color Palette https://coolors.co/000000-ffffff-63d471-63a46c-6a7152-->
+	<color name="colorPrimary">#63D471</color>
+	<color name="colorPrimaryDark">#134419</color>
+	<color name="colorSecondary">#63A46C</color>
+	<color name="colorSecondaryDark">#1B2F1E</color>
+	<color name="colorTertiary">#6A7152</color>
+	<color name="colorTertiaryDark">#1D1F17</color>
+	<color name="colorBlack">#000000</color>
+	<color name="colorWhite">#FFFFFF</color>
+	<color name="colorWhiteDark">#474747</color>
+</resources>

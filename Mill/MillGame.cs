@@ -286,11 +286,11 @@ namespace Mill
                 BlackWins++;
             }
 
-            //TODO: update game to include winner
+            //TODO: update game in DB to include winner
             White = 0;
             Black = 0;
             Turn = 1;
-            //TODO: create new game amd get the id that was auto incremented, save an Empty field with position 0
+            //TODO: create new game and get the id that was auto incremented, save an Empty field with position 0
             for (var i = 1; i <= 24; i++) Board[i] = Player.Empty;
         }
 

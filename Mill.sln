@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mill", "Mill\Mill.csproj", "{D315331A-FAC9-4D90-B8E7-CB285FF6368F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MillTest", "MillTest\MillTest.csproj", "{A58BE9DA-B2D1-4D73-9E85-679940591F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MillApp", "MillApp\MillApp.csproj", "{10A618BD-8312-4983-8F3F-427336525B5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{A58BE9DA-B2D1-4D73-9E85-679940591F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A58BE9DA-B2D1-4D73-9E85-679940591F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A58BE9DA-B2D1-4D73-9E85-679940591F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A618BD-8312-4983-8F3F-427336525B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A618BD-8312-4983-8F3F-427336525B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A618BD-8312-4983-8F3F-427336525B5C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{10A618BD-8312-4983-8F3F-427336525B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A618BD-8312-4983-8F3F-427336525B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A618BD-8312-4983-8F3F-427336525B5C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
